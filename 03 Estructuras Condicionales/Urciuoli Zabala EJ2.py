@@ -1,3 +1,5 @@
-edad=int(input("Ingrese edad: "))
-if edad > 18:
-    print("Es mayor de edad")
+Nota=int(input("Ingrese nota: "))
+if Nota >= 6:
+    print("Aprobado")
+else:
+    print("Desaprobado")
