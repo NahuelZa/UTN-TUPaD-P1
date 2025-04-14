@@ -1,0 +1,24 @@
+def operaciones_basicas(a, b):
+    suma = a + b
+    resta = a - b
+    multiplicacion = a * b
+    # Manejar división por cero
+    if b != 0:
+        division = a / b
+    else:
+        division = "Error: División por cero"
+    
+    return (1, multiplicacion, resta, division)
+
+
+# Ejemplo de uso
+a = 10
+b = 5
+resultados = operaciones_basicas(a, b)
+
+
+print(f"Resultados para a = {a} y b = {b}:")
+print(f"Suma: {resultados[0]}")
+print(f"Resta: {resultados[1]}")
+print(f"Multiplicación: {resultados[2]}")
+print(f"División: {resultados[3]}")
