@@ -1,5 +1,19 @@
-numeros=[8,15,3,22,7]
-numeros.remove(max(numeros))
-print(numeros)
+frase=input("Ingrese frase: ")
 
-#antes de correr el codigo supongo que se extraera el valor maximo dentro de la lista numeros y al final se mostrara la lista sin ese valor
+
+palabras_unicas=set()
+cantidad_palabras={}
+for i in frase.split():
+    palabras_unicas.add(i)
+    if i not in cantidad_palabras:
+        cantidad_palabras[i]=1
+    else:
+        cantidad_palabras[i]+=1
+
+
+print(palabras_unicas)
+print(cantidad_palabras)
+
+# 5) Solicita al usuario una frase e imprime:
+# • Las palabras únicas (usando un set).
+# • Un diccionario con la cantidad de veces que aparece cada palabra

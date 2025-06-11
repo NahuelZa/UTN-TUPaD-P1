@@ -1,19 +1,30 @@
-compras = [["pan", "leche"], ["arroz", "fideos", "salsa"],["agua"]]
+agenda={('Lunes', '10:00'): 'Paparazzi',
+        ('Martes', '11:00'): 'Reunion'}
 
-compras[2].append("jugo")
-compras[1][1]="tallarines"
-compras[0].remove("pan")
+horario=[]
+dia=input("Que dia tiene la actividad? ")
+hora=input("Que hora tiene la actividad ")
+horario.append(dia)
+horario.append(hora)
+actividad=input("Que actividad tiene? ")
+agenda[tuple(horario)]=actividad
 
+print(agenda)
 
-print(compras)
-
-
-
-# Dada la lista “compras”, cuyos elementos representan los productos comprados por
-# diferentes clientes:
-# compras = [["pan", "leche"], ["arroz", "fideos", "salsa"],
-# ["agua"]]
-# a) Agregar "jugo" a la lista del tercer cliente usando append.
-# b) Reemplazar "fideos" por "tallarines" en la lista del segundo cliente.
-# c) Eliminar "pan" de la lista del primer cliente.
-# d) Imprimir la lista resultante por pantalla
+print("Que dia y hora quiere consultar? ")
+consulta_dia=input("Ingrese dia: ")
+consulta_hora=input("Ingrese hora: ")
+encontrado=True
+for i in agenda.keys():
+    dia,hora=i   
+    if consulta_dia==dia and consulta_hora==hora:
+        print(agenda[i],"es la actividad que tiene")
+        break
+    else:        
+        encontrado=False
+        
+if encontrado==False:
+    print(f"no tiene nada el dia {consulta_dia} a las {consulta_hora} ")
+        
+ 
+# 9) Creá una agenda donde las claves sean tuplas de (día, hora) y los valores sean eventos.
